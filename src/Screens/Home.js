@@ -75,7 +75,7 @@ const Home = () => {
               marginTop: 12,
               width: 110,
             }}>
-            <Entypo name="location-pin" size={50} />
+            <Image source={{uri:"https://img.icons8.com/color/48/000000/tesla-model-x.png"}} style={{width:50,height:50}}/>
             <Text style={{alignSelf: 'center', marginTop: 12, fontSize: 12}}>
               OLX AUTOS(CARS)
             </Text>
@@ -87,7 +87,7 @@ const Home = () => {
               marginTop: 12,
               width: 110,
             }}>
-            <Entypo name="location-pin" size={50} />
+            <Image source={{uri:"https://img.icons8.com/color/48/000000/city.png"}} style={{width:50,height:50}}/>
             <Text style={{alignSelf: 'center', marginTop: 12, fontSize: 12}}>
               PROPERTIES
             </Text>
@@ -99,7 +99,7 @@ const Home = () => {
               marginTop: 12,
               width: 110,
             }}>
-            <Entypo name="location-pin" size={50} />
+          <Image source={{uri:"https://img.icons8.com/color/48/000000/google-mobile.png"}} style={{width:50,height:50}}/>
             <Text style={{alignSelf: 'center', marginTop: 12, fontSize: 12}}>
               MOBILES
             </Text>
@@ -111,9 +111,9 @@ const Home = () => {
               marginTop: 12,
               width: 110,
             }}>
-            <Entypo name="location-pin" size={50} />
+           <Image source={{uri:"https://img.icons8.com/color/48/000000/briefcase.png"}} style={{width:50,height:50}}/>
             <Text style={{alignSelf: 'center', marginTop: 12, fontSize: 12}}>
-              BOOKS
+              JOBS
             </Text>
           </View>
           <View
@@ -123,7 +123,7 @@ const Home = () => {
               marginTop: 12,
               width: 110,
             }}>
-            <Entypo name="location-pin" size={50} />
+            <Image source={{uri:"https://img.icons8.com/color/48/000000/monitor--v1.png"}} style={{width:50,height:50}}/>
             <Text style={{alignSelf: 'center', marginTop: 12, fontSize: 12}}>
               ELECTRONICS
             </Text>
