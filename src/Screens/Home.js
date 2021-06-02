@@ -1,10 +1,14 @@
 import React from 'react';
-import {StyleSheet, Text, View, ScrollView} from 'react-native';
+import {StyleSheet, Text, View, ScrollView,Image, SafeAreaView} from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import { FlatGrid } from 'react-native-super-grid';
+import AdCarditem from '../Components/AdCarditem';
+import adData from '../../assets/Data/adData';
 const Home = () => {
   return (
-    <View style={{flex: 1}}>
+    
+    <ScrollView style={{flex:1}} showsVerticalScrollIndicator={false}>
       <View style={styles.topContainer}>
         <View style={styles.locationContainer}>
           <Entypo name="location-pin" size={24} color="#012d32" />
@@ -126,11 +130,20 @@ const Home = () => {
           </View>
         </ScrollView>
       </View>
+      <View style={{marginTop:50,backgroundColor:'white'}}>
+        <Text style={{marginLeft:10,color:'#012d32',fontWeight:'700'}}>Fresh Recommendations</Text>
+
+<FlatGrid
+showsVerticalScrollIndicator={false}
+nestedScrollEnabled={true}
+data={adData}
+spacing={10}
+renderItem={({item})=><AdCarditem imageUri={item.imageUri} title={item.title} price={item.price} location={item.location}/>}/>
       
-    </View>
+      </View>
+      </ScrollView>
   );
 };
-
 export default Home;
 
 const styles = StyleSheet.create({
