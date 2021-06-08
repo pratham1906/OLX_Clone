@@ -4,24 +4,12 @@ import {Card} from 'react-native-shadow-cards';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Feather from 'react-native-vector-icons/Feather';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import {arr} from '../Components/AdCarditem'
 
-const arr = [];
-const AdCarditem = props => {
-  const {title, imageUri, price, location,id} = props;
-  const [isLiked, setIsLiked] = useState(false);
-
-
+const WishlistCardItem = props => {
+  const {title, imageUri, price, location} = props;
+  const [isLiked, setIsLiked] = useState(true);
   const onLikePress = () => {
-    if (isLiked == false) {
-      arr.push({
-        id:id,
-        title: title,
-        imageUri: imageUri,
-        price: price,
-        location: location,
-      });
-     
-    } else {
       console.log('Removal');
       // arr.push({
       //   title: title,
@@ -30,7 +18,6 @@ const AdCarditem = props => {
       //   location: location,
       // });
       const itemToBeRemoved = {
-        id:id,
         title: title,
         imageUri: imageUri,
         price: price,
@@ -39,8 +26,8 @@ const AdCarditem = props => {
       const findIndex = arr.findIndex(a => a.title === itemToBeRemoved.title);
       findIndex !== -1 && arr.splice(findIndex, 1);
       console.log(arr);
-    }
-    setIsLiked(!isLiked);
+    
+      setIsLiked(!isLiked);
   };
 
   return (
@@ -55,7 +42,7 @@ const AdCarditem = props => {
       <View style={{position: 'relative', top: 36, left: '80%'}}>
         <FontAwesome
           name="heart"
-          color={isLiked?"red":"black"}
+          color={isLiked ? 'red' : 'black'}
           size={22}
           onPress={onLikePress}
         />
@@ -99,6 +86,6 @@ const AdCarditem = props => {
   );
 };
 
-export { AdCarditem,arr};
+export { WishlistCardItem,arr};
 
 const styles = StyleSheet.create({});

@@ -10,11 +10,13 @@
 
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import { WishlistCardItem } from './src/Components/WishlistCardItem'
 import Home from './src/Screens/Home'
+import Wishlist from './src/Screens/Wishlist'
 
 const App = () => {
   return (
-    <Home/>
+    <Wishlist/>
   )
 }
 

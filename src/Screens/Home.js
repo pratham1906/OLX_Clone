@@ -3,11 +3,13 @@ import {StyleSheet, Text, View, ScrollView,Image, SafeAreaView} from 'react-nati
 import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { FlatGrid } from 'react-native-super-grid';
-import AdCarditem from '../Components/AdCarditem';
+import {AdCarditem} from '../Components/AdCarditem';
+import {arr} from '../Components/AdCarditem'
 import adData from '../../assets/Data/adData';
 const Home = () => {
+
+
   return (
-    
     <ScrollView style={{flex:1}} showsVerticalScrollIndicator={false}>
       <View style={styles.topContainer}>
         <View style={styles.locationContainer}>
@@ -138,8 +140,7 @@ showsVerticalScrollIndicator={false}
 nestedScrollEnabled={true}
 data={adData}
 spacing={10}
-renderItem={({item})=><AdCarditem imageUri={item.imageUri} title={item.title} price={item.price} location={item.location}/>}/>
-      
+renderItem={({item})=><AdCarditem imageUri={item.imageUri} title={item.title} price={item.price} location={item.location} id={item.id}/>}/>
       </View>
       </ScrollView>
   );
